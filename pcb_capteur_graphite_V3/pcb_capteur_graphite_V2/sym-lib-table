@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "LTC1050")(type "KiCad")(uri "${KIPRJMOD}/LTC1050.kicad_sym")(options "")(descr ""))
+  (lib (name "New_symbols")(type "KiCad")(uri "${KIPRJMOD}/New_symbols.kicad_sym")(options "")(descr ""))
+)
