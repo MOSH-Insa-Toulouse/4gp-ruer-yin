@@ -16,17 +16,17 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   int i = 0; 
-  char someChar[32] ={0};
+  
   //when characters arrive over the serial port...
 
   while (Serial.available()) {
      do{
-    someChar[i++] = Serial.read();
+    i++;//Serial.read();
     delay(3);   
      }while (Serial.available() > 0);
      
-     mySerial.println(someChar); 
-     Serial.println(someChar); 
+     mySerial.println(i); 
+     Serial.println(i); 
   }
   while (mySerial.available()) {
     Serial.print((char)mySerial.read());
