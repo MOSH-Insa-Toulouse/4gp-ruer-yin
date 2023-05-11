@@ -11,6 +11,8 @@ Ce projet sert à caractériser la résistance des capteurs graphites sous diff�
 * [1. Liverables et matériels](#PremiereSection)
 * [2. Réalisation Kicad et PCB](#DeuxiemeSection)
 * [3. Code Arduino](#TroisemeSection)
+* [4. (Application MIT app inventor)](#QuartiemeSection)
+* [5. (Banc de test)](#CinqiemeSection)
 ## 1. Liverables et matériels <a id="PremiereSection"></a>
 ***
 Les liverables principaux sont: 
@@ -33,13 +35,27 @@ Les matériels nécessaires sont:
 
 ## 2. Réalisation Kicad et PCB <a id="DeuxiemeSection"></a>
 Pour designer un carte PCB où on peut intégrer les matériels mentionnés au dessus, il est nécessaire de utiliser kicad pour designer un circuit de conductant de cuivre et les composants soudés au dessus. Les détailes de ces composants et de la cirtuit sont visibles dans les images au dessous.  
+* L'image des symboles:
 
-Apres les vérifications electroniques, nous avons envoyé le fichier d'imprimant à Madame Catherine Crouzet pour poursuivre un impression de PCB avec elle. Ce PCB est réalisé sur un plaquette epoxy. A la fin des procédés de photolitographie et de gravure chimique, l'impression du circuit est réalisé sur l'un de cette plaquette. Nous avons poursuive les perçages des trous pour intégrer les matériels et le soudage de ces matériels. Les trous on les 2 différents diamètres. Pour les trous du module Arduino Uno, le diametre est 1mm. Les trous de reste ont de diametre 0.8mm selon la consigne de Madame Catherine Crouzet.
+* L'image du PCB et son image 3D
+ 
+Après les vérifications electroniques, nous avons envoyé le fichier d'imprimant à Madame Catherine Crouzet pour poursuivre un impression de PCB avec elle. Ce PCB est réalisé sur un plaquette epoxy. A la fin des procédés de photolitographie et de gravure chimique, l'impression du circuit est réalisé sur l'un de cette plaquette. Nous avons poursuive les perçages des trous pour intégrer les matériels et le soudage de ces matériels. Les trous on les 2 différents diamètres. Pour les trous du module Arduino Uno, le diametre est 1mm. Les trous de reste ont de diametre 0.8mm selon la consigne de Madame Catherine Crouzet.
 
-## 3. Code Arduino
-L'objetif de script d'arduino sont
-* mesurer le voltage en temp relle de la sortie du circuit
-* En déduire la valeur de résistance mesuré.
+## 3. Code Arduino <a id="TroisemeSection"></a>
+Les objetifs de script d'arduino nommé [plz-work.ino](https://github.com/MOSH-Insa-Toulouse/4gp-ruer-yin/tree/main/Arduino/plz-work/plz-work) sont:
+* mesurer le voltage en temp relle de la sortie du circuit (VA0)
+* En déduire la valeur de résistance R du capteur graphite.
 * Envoyer la valeur de tension mesuré sous 1 octect par le module de bluetooth.
 * Afficher la valeur de résistance sur l'écran OLED.
+Le code essentielle est effctivement les code de mesure et de calcule de valeur de résistance. Depuis les simulations de LTSpice, la formule exact que nous avons écrit dans le code est:
+#### R =  50/(5*VA0/1023) R(Mohm), VA0(V)
+
+## Application (MIT app inventor) <a id="QuartiemeSection"></a>
+Les objetifs de cet application est de communiquer en temp relle avec le module d'Arduino des valeurs de resistance et les afficher. 
+La connection de bluetooth se réalise par trois bloc de "when". On affiche le liste d'adresse de bluetooth dans le mémoire de téléphone. Puis on pourra sélectionner un adresse. Le téléphone est ensuite connecté à bluetooth. 
+* L'image de resultat:
  
+Le Bouton "Reception_bluetooth" sert à lancer le chronologe. Ensuite, la reste de programme sert à tracer le courbre du valeur de résistance en fonction du temps relle.
+* L'image du graphe:
+
+## Banc de test <a id="CinqiemeSection"></a>
