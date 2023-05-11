@@ -34,5 +34,12 @@ Les matériels nécessaires sont:
 ## 2. Réalisation Kicad et PCB <a id="DeuxiemeSection"></a>
 Pour designer un carte PCB où on peut intégrer les matériels mentionnés au dessus, il est nécessaire de utiliser kicad pour designer un circuit de conductant de cuivre et les composants soudés au dessus. Les détailes de ces composants et de la cirtuit sont visibles dans les images au dessous.  
 
-Apres les vérifications electroniques, nous avons envoyé le fichier d'imprimant à Madame Catherine Crouzet pour poursuivre un impression de PCB avec elle. Ce PCB est réalisé sur un plaquette epoxy. A la fin des procédés de photolitographie et de gravure chimique, l'impression du circuit est réalisé sur l'un de cette plaquette. Nous avons poursuive les percage des trous pour intégrer les matériels et le soudage de ces matériels.
+Apres les vérifications electroniques, nous avons envoyé le fichier d'imprimant à Madame Catherine Crouzet pour poursuivre un impression de PCB avec elle. Ce PCB est réalisé sur un plaquette epoxy. A la fin des procédés de photolitographie et de gravure chimique, l'impression du circuit est réalisé sur l'un de cette plaquette. Nous avons poursuive les perçages des trous pour intégrer les matériels et le soudage de ces matériels. Les trous on les 2 différents diamètres. Pour les trous du module Arduino Uno, le diametre est 1mm. Les trous de reste ont de diametre 0.8mm selon la consigne de Madame Catherine Crouzet.
+
 ## 3. Code Arduino
+L'objetif de script d'arduino sont
+* mesurer le voltage en temp relle de la sortie du circuit
+* En déduire la valeur de résistance mesuré.
+* Envoyer la valeur de tension mesuré sous 1 octect par le module de bluetooth.
+* Afficher la valeur de résistance sur l'écran OLED.
+ 
