@@ -56,8 +56,7 @@ Les objetifs de script d'arduino nommé [plz-work.ino](https://github.com/MOSH-I
 * En déduire la valeur de résistance R du capteur graphite.
 * Envoyer la valeur de tension mesuré sous 1 octect par le module de bluetooth.
 * Afficher la valeur de résistance sur l'écran OLED.
-Le code essentielle est effctivement les code de mesure et de calcule de valeur de résistance. Depuis les simulations de LTSpice, la formule exact que nous avons écrit dans le code est:
-#### R =  50/(5*VA0/1023) R(Mohm), VA0(V) (1.1)
+Le code essentielle est effctivement les code de mesure et de calcule de valeur de résistance. Selon les simulations de LTSpice, on peut en deduit la resistance exact que nous aimerions de mesurer.
 
 ## 5. Application (MIT app inventor) <a id="QuartiemeSection"></a>
 Les objetifs de cet application est de communiquer en temp relle avec le module d'Arduino des valeurs de resistance et les afficher. 
