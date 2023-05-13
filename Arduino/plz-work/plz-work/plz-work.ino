@@ -50,16 +50,15 @@ Rc = 50/voltage_output;
 
 
 // Bluetooth
-while (Serial.available()) {
-     do{
-    //Serial.read();
-    delay(3);   
-     }while (Serial.available() > 0);
+
+    
      
      //mySerial.println(i); 
-     mySerial.write(voltage_output);
-     Serial.println(Rc); 
-  }
+     mySerial.write(voltage_output/4);
+     Serial.print(Rc); 
+     Serial.println("Ohm");
+     
+  
 
 
 //Affichage et saisie de texte
