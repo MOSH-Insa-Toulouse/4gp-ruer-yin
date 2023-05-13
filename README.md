@@ -56,8 +56,7 @@ Les objetifs de script d'arduino nommé [plz-work.ino](https://github.com/MOSH-I
 * En déduire la valeur de résistance R du capteur graphite.
 * Envoyer la valeur de tension mesuré sous 1 octect par le module de bluetooth.
 * Afficher la valeur de résistance sur l'écran OLED.
-Le code essentielle est effctivement les code de mesure et de calcule de valeur de résistance. Depuis les simulations de LTSpice, la formule exact que nous avons écrit dans le code est:
-#### R =  50/(5*VA0/1023) R(Mohm), VA0(V) (1.1)
+Le code essentielle est effctivement les code de mesure et de calcule de valeur de résistance. Selon les simulations de LTSpice, on peut en deduit la resistance exact que nous aimerions de mesurer.
 
 ## 5. Application (MIT app inventor) <a id="QuartiemeSection"></a>
 Les objetifs de cet application est de communiquer en temp relle avec le module d'Arduino des valeurs de resistance et les afficher. 
@@ -73,4 +72,5 @@ Le Bouton "Reception_bluetooth" sert à lancer le chronologe. Ensuite, dans le b
 Nous avons testé notre capteur graphite dans les différent angle de déformation. Ce dernier est caractériser par un banc de test dans l'image au dessus. Le banc de test est composé par les différents semi sphère de diamètre 5cm, 4.5cm, 4cm, 3.5cm, 3cm, 2.5cm, 2cm. Pendant le test, on colle le côté où il y a pas de graphite aux différent semi shère du banc de test et on fait le mesure du résistance. Ensuite on cherche la relation entre le déformation définit comme par le formule ε=D/(2*R)(où ε est la déformation, D est l'épaisseur du papier, R est la rayon de courbure) et la variation relative de (ΔR/R0).  
 Nous avons décidé de faire les tests sur un graphite de 2H en applicant la seulement la tension. Il y a pas de mesure sous condition de compression car on a réalisé pendant les mesure que la forme de capteur graphite n'est pas réversible. Premièrement, on peut très facilement dépasser le limite élastique du papier. Deuxièmement, même si on ne change pas la forme de ce papier, la résistance n'est souvent pas réversible. En conséquence, on a choisit de faire le mesure seulment sur la tension pour chaque échantillon. Les résultat sont montré dans le fichier Datasheet.pdf.
 Le résultat montre une relation linéaire entre la déformation et la variation relative de la résistance de capteur. On peut déduit l'angle de déformation  depuis un résistance mesurée. 
-![image](https://github.com/MOSH-Insa-Toulouse/4gp-ruer-yin/assets/55764097/70c07d35-6b65-4e83-90e5-3ea4b9b5e26b)
+![image](https://github.com/MOSH-Insa-Toulouse/4gp-ruer-yin/assets/55764097/9984402f-4436-4098-8aed-d8400ceba687)
+
