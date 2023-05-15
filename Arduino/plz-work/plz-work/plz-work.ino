@@ -15,11 +15,12 @@ SoftwareSerial mySerial(rxPin ,txPin); //Definition du software serial
 
 float voltage_output;
 float Rc;
+float VBT;
 
 Adafruit_SSD1306 ecranOLED(x, y, &Wire, brocheResetOLED);
 
 void setup() {
-  Serial.begin(9600);
+  
   if(!ecranOLED.begin(SSD1306_SWITCHCAPVCC, adresseI2CecranOLED))
     while(1);    
   
@@ -29,9 +30,9 @@ void setup() {
 
   pinMode(rxPin,INPUT);
   pinMode(txPin,OUTPUT);
-    
+
   mySerial.begin(baudrate);
-  Serial.begin(baudrate);
+  Serial.begin(9600);
   ecranOLED.setCursor(10,y/2);
   ecranOLED.print("Initialization...");
   ecranOLED.display(); 
@@ -50,17 +51,16 @@ Rc = 50/voltage_output;
 
 
 // Bluetooth
-
-    
-     
-     //mySerial.println(i); 
-     mySerial.write(voltage_output/4);
-     Serial.print(Rc); 
-     Serial.println("Ohm");
+//mySerial.println(i); 
+mySerial.write(voltage_output/4);
+VBT = analogRead(A3); //voltage de rxPin su
+VBT = VBT*5/1023;
+Serial.print(VBT); 
+Serial.println("V");
+Serial.print(Rc); 
+Serial.println("Ohm");
      
   
-
-
 //Affichage et saisie de texte
 
 
