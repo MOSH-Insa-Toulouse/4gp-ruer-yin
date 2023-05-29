@@ -61,10 +61,10 @@ Le code essentielle est effctivement les code de mesure et de calcule de valeur 
 ## 5. Application (MIT app inventor) <a id="QuartiemeSection"></a>
 Les objetifs de cet application est de communiquer en temp relle avec le module d'Arduino des valeurs de resistance et les afficher. 
 La connection de bluetooth se réalise par trois bloc de "when". On affiche le liste d'adresse de bluetooth dans le mémoire de téléphone. Puis on pourra sélectionner un adresse. Le téléphone est ensuite connecté à bluetooth. 
-![MIT App Inventor 2 - Google Chrome 2023_5_12 16_01_11](https://github.com/MOSH-Insa-Toulouse/4gp-ruer-yin/assets/55764097/8262ee69-ab9a-41b2-8d50-958a2497ad3e)![MIT App Inventor 2 - Google Chrome 2023_5_11 22_43_18](https://github.com/MOSH-Insa-Toulouse/4gp-ruer-yin/assets/55764097/09f62442-8b15-4392-89e2-818eae6ac4fa)
+![MIT App Inventor 2 - Google Chrome 2023_5_12 16_01_11](https://github.com/MOSH-Insa-Toulouse/4gp-ruer-yin/assets/55764097/8262ee69-ab9a-41b2-8d50-958a2497ad3e)!
 
 Le Bouton "Reception_bluetooth" sert à lancer le chronologe. Ensuite, dans le blocs orange fait le calcule depuis un octet envoyé par le Bluetooth HC-05 en utilisant la formule  1.1. Dans le graphe, le fonciton en bloc violet trace le graphe en tracant tous les lignes entre tous les 2 point.  
-![MIT App Inventor 2 - Google Chrome 2023_5_12 16_00_10](https://github.com/MOSH-Insa-Toulouse/4gp-ruer-yin/assets/55764097/7f6833b9-780c-4e49-8b4b-d872e656306a)
+
 
 ## 6. Banc de test <a id="CinqiemeSection"></a>
 ![344287991_991684428512524_8927725149100369612_n](https://github.com/MOSH-Insa-Toulouse/4gp-ruer-yin/assets/55764097/d1cc95a4-a901-4529-8e2c-b168caf000b8)
