@@ -17,6 +17,13 @@ float voltage_output;
 float Rc;
 float VBT;
 int binary_voltage;
+#define R1 100000.0
+#define R2  1000.0  
+#define R3  100000.0   
+#define R4  10000.0 
+#define R5  1000.0 
+#define Vcc  5.0 
+float calibre = 0.000001; 
 
 Adafruit_SSD1306 ecranOLED(x, y, &Wire, brocheResetOLED);
 
@@ -49,8 +56,8 @@ void loop() {
 voltage_output = analogRead(A0);
 binary_voltage = voltage_output;
 voltage_output = 5*voltage_output/1023;
-Rc = 50/voltage_output;
-
+//Rc = 50/voltage_output;
+Rc= ((R1*((R2+R3)/R2)*(Vcc/voltage_output))-R4-R1)*calibre;
 
 // Bluetooth
 //mySerial.println(i); 
@@ -58,6 +65,8 @@ mySerial.write(voltage_output/4);
 VBT = analogRead(A3); //voltage de rxPin su
 VBT = VBT*5/1023;
 Serial.print(binary_voltage); 
+Serial.println("V");
+Serial.print(VBT); 
 Serial.println("V");
 Serial.print(Rc); 
 Serial.println("Ohm");
